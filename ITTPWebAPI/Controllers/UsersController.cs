@@ -257,7 +257,7 @@ namespace ITTPWebAPI.Controllers
         // 6) Запрос пользователя по логину, в списке долны быть имя, пол и дата рождения статус активный или нет
         // Доступно Админам
         [HttpGet("RequestUser/Login")]
-        public async Task<ActionResult<IEnumerable<User>>> GetUsers(string login, string password, string userLogin)
+        public async Task<ActionResult<IEnumerable<User>>> GetUser(string login, string password, string userLogin)
         {
             User admin = await _context.GetAdmin(login, password);
             
